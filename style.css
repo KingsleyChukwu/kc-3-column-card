@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Inter:wght@400;500;600;700;800;900&family=Lexend+Deca:wght@400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lexend Deca', sans-serif;;
+    box-sizing: border-box;
+    transition: all .5s linear;
+}
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+.container {
+    margin: 30px auto;
+    width: 65%;
+}
+
+.car-brands {
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    background-color: var(--bright-orange);
+}
+
+.car-brands .logo img {
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+.heading {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--very-light-gray);
+}
+
+.text {
+    font-size: 11px;
+    color: var(--transparent-white);
+    line-height: 13px;
+}
+
+.car-brands.suv {
+    background-color: var(--dark-cyan);
+}
+
+button {
+    padding: 10px 14px;
+    border-radius: 16px;
+    font-size: 11px;
+    outline: none;
+    border: none;
+    background-color: var(--very-light-gray);
+    color: var(--bright-orange);
+    cursor: pointer;
+}
+
+.empty {
+    height: 50px;
+}
+
+.sedans {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+button:hover {
+    color: var(--very-light-gray);
+    background-color: var(--bright-orange);
+    border: 1px solid var(--very-light-gray);
+}
+
+.suv button {
+    color: var(--dark-cyan);
+}
+
+.suv button:hover {
+    color: var(--very-light-gray);
+    background-color: var(--dark-cyan);
+    border: 1px solid var(--very-light-gray);
+}
+
+.car-brands.luxury {
+    background-color: var(--very-dark-cyan);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.luxury button {
+    color: var(--dark-cyan);
+}
+
+.luxury button:hover {
+    color: var(--very-light-gray);
+    background-color: var(--very-dark-cyan);
+    border: 1px solid var(--very-light-gray);
+}
+
+
+.attribution {
+    font-size: 12px;
+    text-align: center;
+}
+
+.attribution a {
+    font-family: 'Big Shoulders Display', sans-serif;
+    color: var(--very-dark-cyan);
+    font-size: 19px;
+}
+
+@media screen and (min-width: 455px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+
+    .container {
+        display: flex;
+        margin-bottom: 0;
+        max-width: 65%;
+        height: 68%;
+    }
+
+    .heading {
+        margin-bottom: 30px;
+    }
+
+    .text {
+        line-height: 15px;
+    }
+
+    .car-brands {
+        position: relative;
+        padding: 30px 10px;
+    }
+
+    .car-brands.luxury {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 8px;
+    }
+
+    .empty {
+        height: 80px;
+    }
+
+    .car-brands.sedans {
+        border-bottom-left-radius: 8px;
+        border-top-right-radius: 0px;
+    }
+
+    button {
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 30px;
+    }
+
+    .attribution {
+        font-size: 12px;
+        text-align: center;
+        position: absolute;
+        bottom: 30px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .container {
+        width: 55%;
+    }
+
+    .car-brands {
+        padding: 30px;
+    }
+}
